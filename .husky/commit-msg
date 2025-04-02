@@ -1,0 +1,5 @@
+#!/bin/sh
+
+
+
+bunx --no -- commitlint --edit "$1"
