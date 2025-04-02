@@ -6,6 +6,9 @@ export function alpha(color: THexColor, alphaChannel: number) {
 export type THexColor = `#${string}`;
 
 export type TPalette = {
+  transparent: THexColor;
+
+  white: THexColor;
   yellow: THexColor;
   red: THexColor;
   blue: THexColor;
@@ -38,6 +41,9 @@ type TColors = {
 
 export const colors: TColors = {
   nightVali: {
+    transparent: "#00000000",
+
+    white: "#ffffff",
     yellow: "#fde68a",
     red: "#f87171",
     blue: "#38bdf8",
@@ -63,3 +69,7 @@ export const colors: TColors = {
     specialFunctions: () => colors.nightVali.red,
   },
 };
+// [ ] remove it
+// c084fc40
+// const test = alpha(colors.nightVali.yellow, 0.314);
+// console.log(test);

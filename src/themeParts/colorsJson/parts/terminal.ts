@@ -1,0 +1,35 @@
+import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
+
+const terminal = {
+  "panel.background": colors.nightVali.background,
+  "panelSection.border": colors.nightVali.comments,
+  "panel.border": colors.nightVali.yellow,
+  "panelTitle.activeBorder": colors.nightVali.red,
+  "panelTitle.activeForeground": colors.nightVali.foreground,
+  "panelTitle.inactiveForeground": colors.nightVali.comments,
+  "badge.background": colors.nightVali.yellow,
+  "badge.foreground": colors.nightVali.background,
+  "terminal.foreground": colors.nightVali.foreground,
+  "terminal.selectionBackground": "#ffffff40",
+  "terminalCursor.background": colors.nightVali.transparent,
+  "terminalCursor.foreground": "#ff0000",
+  "terminal.border": colors.nightVali.comments,
+  "terminal.ansiBlack": "#080808",
+  "terminal.ansiBlue": "#2472c8",
+  "terminal.ansiBrightBlack": "#666666",
+  "terminal.ansiBrightBlue": "#3b8eea",
+  "terminal.ansiBrightCyan": "#29b8db",
+  "terminal.ansiBrightGreen": "#23d18b",
+  "terminal.ansiBrightMagenta": "#d670d6",
+  "terminal.ansiBrightRed": "#f14c4c",
+  "terminal.ansiBrightWhite": "#e5e5e5",
+  "terminal.ansiBrightYellow": "#f5f543",
+  "terminal.ansiCyan": "#11a8cd",
+  "terminal.ansiGreen": "#0dbc79",
+  "terminal.ansiMagenta": "#bc3fbc",
+  "terminal.ansiRed": "#cd3131",
+  "terminal.ansiWhite": "#e5e5e5",
+  "terminal.ansiYellow": "#e5e510",
+};
+
+export default terminal;
