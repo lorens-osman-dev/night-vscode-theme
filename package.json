@@ -26,9 +26,11 @@
   "dependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
+    "color": "^5.0.0",
     "husky": "^9.1.7"
   },
   "scripts": {
+    "watch": "bun --watch src/*",
     "prepare": "husky"
   }
 }
