@@ -1,8 +1,8 @@
+import { colors } from "@/themeParts/colorsObject/colors";
+
 const editor = {
-  "editor.background": "#333333",
-  "editor.foreground": "#eeffff",
-  "activityBarBadge.background": "#007acc",
-  "sideBarTitle.foreground": "#bbbbbb",
+  "editor.background": colors.nightVali.background,
+  "editor.foreground": colors.nightVali.foreground,
 };
 
 export default editor;

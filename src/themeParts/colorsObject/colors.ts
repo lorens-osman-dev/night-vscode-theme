@@ -32,10 +32,11 @@ export type TPalette = {
 };
 
 type TColors = {
-  [key: string]: TPalette;
+  nightVali: TPalette;
+  nightShift?: TPalette;
 };
 
-const colors: TColors = {
+export const colors: TColors = {
   nightVali: {
     yellow: "#fde68a",
     red: "#f87171",
@@ -62,4 +63,3 @@ const colors: TColors = {
     specialFunctions: () => colors.nightVali.red,
   },
 };
-export default colors;
