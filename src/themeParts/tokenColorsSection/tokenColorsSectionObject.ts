@@ -12,18 +12,18 @@ import python from "./parts/python";
 import php from "./parts/php";
 import otherLangs from "./parts/otherLangs";
 
-export default function colorsSectionObject(palette: TColorPalette): TTextMateRule[] {
-  return {
+export default function tokenColorsSectionObject(palette: TColorPalette): TTextMateRule[] {
+  return [
+    ...ts(palette),
+    ...css(palette),
+    ...html(palette),
+    ...vue(palette),
+    ...md(palette),
     ...general(palette),
     ...otherLangs(palette),
     ...php(palette),
     ...python(palette),
     ...java(palette),
     ...json(palette),
-    ...md(palette),
-    ...vue(palette),
-    ...html(palette),
-    ...css(palette),
-    ...ts(palette),
-  };
+  ];
 }

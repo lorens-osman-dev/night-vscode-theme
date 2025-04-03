@@ -1,11 +1,14 @@
-import colorsSectionObject from "./themeParts/colorsSection/colorsSectionObject";
 import { palettes } from "./palettes";
-import type { THexColor, TColorPalette } from "./types/colors";
+import type { THexColor, TColorPalette, TTextMateRule } from "./types/colors";
+import colorsSectionObject from "./themeParts/colorsSection/colorsSectionObject";
+import tokenColorsSectionObject from "./themeParts/tokenColorsSection/tokenColorsSectionObject";
 
 export default class ThemeClass {
   colorPallette: TColorPalette;
   colorsSectionObject: { [key: string]: THexColor };
   colorsSectionJson: string;
+  tokenColorsSectionObject: TTextMateRule[];
+  tokenColorsSectionJson: string;
   constructor(palette: TColorPalette) {
     this.colorPallette = palette;
 
@@ -22,10 +25,12 @@ export default class ThemeClass {
     this.colorPallette.specialFunctions = this.colorPallette.red;
 
     this.colorsSectionObject = colorsSectionObject(this.colorPallette);
-
     this.colorsSectionJson = JSON.stringify(this.colorsSectionObject);
+
+    this.tokenColorsSectionObject = tokenColorsSectionObject(this.colorPallette);
+    this.tokenColorsSectionJson = JSON.stringify(this.tokenColorsSectionObject);
   }
 }
 
 const tt = new ThemeClass(palettes.base);
-console.log(tt.colorsSectionObject);
+console.log(tt.tokenColorsSectionObject);
