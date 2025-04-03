@@ -13,8 +13,9 @@
 				"--extensionDevelopmentPath=${workspaceFolder}",
 				"--disable-extensions",
 				"--profile=default",
-				"--folder-uri=file://${workspaceFolder}/themes"
-			]
+				"--folder-uri=file://${workspaceFolder}/src"
+			],
+			"preLaunchTask": "bun: watch"
 		}
 	]
 }

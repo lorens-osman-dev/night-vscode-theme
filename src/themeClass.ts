@@ -1,4 +1,3 @@
-import { palettes } from "./palettes";
 import type { THexColor, TColorPalette, TTextMateRule } from "./types/colors";
 import colorsSectionObject from "./themeParts/colorsSection/colorsSectionObject";
 import tokenColorsSectionObject from "./themeParts/tokenColorsSection/tokenColorsSectionObject";
@@ -30,7 +29,13 @@ export default class ThemeClass {
     this.tokenColorsSectionObject = tokenColorsSectionObject(this.colorPallette);
     this.tokenColorsSectionJson = JSON.stringify(this.tokenColorsSectionObject);
   }
+  themeResult(templateName: string) {
+    return {
+      name: templateName,
+      type: "dark",
+      semanticHighlighting: true,
+      colors: this.colorsSectionObject,
+      tokenColors: this.tokenColorsSectionObject,
+    };
+  }
 }
-
-const tt = new ThemeClass(palettes.base);
-console.log(tt.tokenColorsSectionObject);
