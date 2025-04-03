@@ -1,5 +1,23 @@
-export type THexColor = `#${string}`;
+import type { ThemeColor } from "vscode";
 
+type TTextMateRule = {
+  name?: string;
+  scope: string | string[];
+  settings: {
+    foreground?: string;
+    background?: string;
+    fontStyle?:
+      | "italic"
+      | "bold"
+      | "underline"
+      | "none"
+      | "italic bold"
+      | "italic underline"
+      | "bold underline"
+      | "italic bold underline";
+  };
+};
+export type THexColor = `#${string}`;
 export type TPalette = {
   transparent: THexColor;
 
