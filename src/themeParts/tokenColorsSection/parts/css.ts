@@ -4,7 +4,7 @@ export default function css(palette: TColorPalette): TTextMateRule[] {
   return [
     {
       name: "Control Elements",
-      scope: "control.elements, keyword.operator.less",
+      scope: "control.elements, keyword.operator.less ,keyword.control.at-rule",
       settings: {
         foreground: palette.purple,
       },
@@ -35,7 +35,7 @@ export default function css(palette: TColorPalette): TTextMateRule[] {
       name: "CSS/SCSS/LESS Operators",
       scope: "keyword.operator.css,keyword.operator.scss,keyword.operator.less",
       settings: {
-        foreground: palette.red,
+        foreground: palette.fosfor,
       },
     },
 
@@ -79,7 +79,7 @@ export default function css(palette: TColorPalette): TTextMateRule[] {
       name: "css html tags names",
       scope: "entity.name.tag.css",
       settings: {
-        foreground: palette.purple,
+        foreground: palette.white,
         fontStyle: "bold",
       },
     },
@@ -96,7 +96,7 @@ export default function css(palette: TColorPalette): TTextMateRule[] {
       name: "parent reference & ",
       scope: "entity.name.tag.reference.scss",
       settings: {
-        foreground: palette.foreground,
+        foreground: palette.fosfor,
         fontStyle: "bold",
       },
     },
@@ -129,6 +129,13 @@ export default function css(palette: TColorPalette): TTextMateRule[] {
       scope: ["entity.other.attribute-name.pseudo-element", "entity.other.attribute-name.pseudo-class"],
       settings: {
         foreground: palette.red,
+      },
+    },
+    {
+      name: "css functions",
+      scope: "support.function.misc.scss",
+      settings: {
+        foreground: palette.blue,
       },
     },
   ];

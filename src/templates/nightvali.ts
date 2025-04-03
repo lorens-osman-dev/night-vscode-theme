@@ -9,6 +9,11 @@ interface VampireProps {
   weaknesses: string[];
 }
 
+type VampireProp ={
+  location: string;
+
+}
+
 class Vampire {
   location: string;
   birthDate: number;
@@ -16,6 +21,7 @@ class Vampire {
   weaknesses: string[];
 
   constructor(props: VampireProps) {
+    super(this.location)
     this.location = props.location;
     this.birthDate = props.birthDate;
     this.deathDate = props.deathDate;

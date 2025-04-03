@@ -207,23 +207,10 @@ export default function general(palette: TColorPalette): TTextMateRule[] {
         foreground: palette.foreground,
       },
     },
-    {
-      name: "Functions",
-      scope: ["entity.name.function", "meta.require", "support.function.any-method", "variable.function"],
-      settings: {
-        foreground: palette.green,
-      },
-    },
+
     {
       name: "Classes",
       scope: "entity.name.type.namespace",
-      settings: {
-        foreground: palette.blue,
-      },
-    },
-    {
-      name: "Classes",
-      scope: "support.class, entity.name.type.class",
       settings: {
         foreground: palette.blue,
       },
@@ -236,20 +223,7 @@ export default function general(palette: TColorPalette): TTextMateRule[] {
       },
     },
 
-    {
-      name: "Type Name",
-      scope: "entity.name.type",
-      settings: {
-        foreground: palette.blue,
-      },
-    },
-    {
-      name: "Keyword Control",
-      scope: "keyword.control",
-      settings: {
-        foreground: palette.greenSecond,
-      },
-    },
+
 
     {
       name: "Methods",
@@ -266,13 +240,7 @@ export default function general(palette: TColorPalette): TTextMateRule[] {
       },
     },
 
-    {
-      name: "Support",
-      scope: "support.function",
-      settings: {
-        foreground: palette.red,
-      },
-    },
+
     {
       name: "Support type",
       scope: "support.type.property-name",

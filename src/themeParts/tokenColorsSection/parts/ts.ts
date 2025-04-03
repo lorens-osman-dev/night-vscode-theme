@@ -3,35 +3,39 @@ import type { TColorPalette, TTextMateRule } from "@/types/colors";
 export default function ts(palette: TColorPalette): TTextMateRule[] {
   return [
     {
-      name: "js variable readwrite",
+      name: "variable names",
       scope:
         "variable.other.readwrite,meta.object-literal.key,support.variable.property,support.variable.object.process,support.variable.object.node",
       settings: {
-        foreground: palette.yellow,
+        foreground: palette.blue,
       },
     },
     {
-      name: "js console function",
-      scope: "entity.name.function,support.function.console",
+      name: "Functions+methods names",
+      scope: ["entity.name.function", "meta.require", "support.function.any-method", "variable.function"],
       settings: {
-        foreground: palette.green,
+        foreground: palette.blue,
       },
     },
     {
-      name: "Source Js Keyword Operator Delete,source Js Keyword Operator In,source Js Keyword Operator Of,source Js Keyword Operator Instanceof,source Js Keyword Operator New,source Js Keyword Operator Typeof,source Js Keyword Operator Void",
+      name: "spiceal functions",
+      scope: "support.function",
+      settings: {
+        foreground: palette.pink,
+      },
+    },
+    {
+      name: " Delete,In,Of and Void keywords",
       scope:
-        "keyword.operator.expression.delete,keyword.operator.expression.in,keyword.operator.expression.of,keyword.operator.expression.instanceof,keyword.operator.new,keyword.operator.expression.typeof,keyword.operator.expression.void",
+        ["keyword.operator.expression",
+          "delete,keyword.operator.expression.in",
+          "keyword.operator.expression.of",
+          "keyword.operator.expression.void"],
       settings: {
-        foreground: palette.greenSecond,
+        foreground: palette.red,
       },
     },
-    {
-      name: "Import module JS",
-      scope: ["keyword.operator.module"],
-      settings: {
-        foreground: palette.greenSecond,
-      },
-    },
+
     {
       name: "js Flowtype",
       scope: ["support.type.type.flowtype"],
@@ -48,9 +52,10 @@ export default function ts(palette: TColorPalette): TTextMateRule[] {
     },
     {
       name: "js class prop",
-      scope: ["meta.property.object"],
+      scope: ["meta.property.object",""],
       settings: {
-        foreground: palette.yellow,
+        foreground: palette.yellowBright,
+       
       },
     },
     {
@@ -130,13 +135,7 @@ export default function ts(palette: TColorPalette): TTextMateRule[] {
         foreground: palette.foreground,
       },
     },
-    {
-      name: "js/ts import keyword",
-      scope: "keyword.operator.expression.import",
-      settings: {
-        foreground: palette.green,
-      },
-    },
+
     {
       name: "math js/ts",
       scope: "support.constant.math",
@@ -170,13 +169,14 @@ export default function ts(palette: TColorPalette): TTextMateRule[] {
       name: "js/ts Keyword",
       scope: [
         "keyword.operator.expression.instanceof",
+        "keyword.operator.expression.typeof",
         "keyword.operator.new",
         "keyword.operator.ternary",
         "keyword.operator.optional",
         "keyword.operator.expression.keyof",
       ],
       settings: {
-        foreground: palette.greenSecond,
+        foreground: palette.purple,
       },
     },
     {
@@ -202,7 +202,7 @@ export default function ts(palette: TColorPalette): TTextMateRule[] {
     },
     {
       name: "Class name",
-      scope: ["entity.name.class", "variable.other.class.js", "variable.other.class.ts"],
+      scope: ["entity.name.class", "variable.other.class.js", ".class.ts"],
       settings: {
         foreground: palette.blue,
       },
@@ -232,27 +232,21 @@ export default function ts(palette: TColorPalette): TTextMateRule[] {
     {
       name: "js/ts italic",
       scope:
-        "entity.other.attribute-name.js,entity.other.attribute-name.ts,entity.other.attribute-name.jsx,entity.other.attribute-name.tsx,variable.parameter,variable.language.super",
+        "entity.other.attribute-name.js,entity.other.attribute-name.ts,entity.other.attribute-name.jsx,entity.other.attribute-name.tsx,variable.parameter",
       settings: {
-        fontStyle: "italic",
+        foreground: palette.banaf,
+
       },
     },
     {
-      name: "Keyword Control like import keyword",
-      scope: "keyword.control",
+      name: "Keyword Control like import,default, export.. keywords",
+      scope: ["keyword.control"],
       settings: {
         foreground: palette.red,
         fontStyle: "bold",
       },
     },
 
-    {
-      name: "interface name + class name",
-      scope: "interface,entity.name.type.interface,entity.name.type,entity.name.type.class",
-      settings: {
-        fontStyle: "italic bold",
-      },
-    },
     {
       name: "typeScript interface keyword + type keyword",
       scope: "storage.type.interface.ts,storage.type.type.ts",
@@ -262,16 +256,16 @@ export default function ts(palette: TColorPalette): TTextMateRule[] {
     },
     {
       name: "typeScript (extends ,implements ..) keywords",
-      scope: "storage.modifier.ts",
+      scope: "storage.modifier",
       settings: {
-        foreground: palette.red,
+        foreground: palette.banaf,
       },
     },
     {
       name: "this keyword",
-      scope: "variable.language.this.ts",
+      scope: "variable.language.this",
       settings: {
-        foreground: "#b62b2b",
+        foreground: palette.orange,
       },
     },
     {
@@ -282,17 +276,49 @@ export default function ts(palette: TColorPalette): TTextMateRule[] {
       },
     },
     {
+      name: "storage.type like let,const,var",
+      scope: "storage.type",
+      settings: {
+        foreground:palette.green
+      },
+    },
+    {
       name: "async awite + return",
-      scope: "storage.modifier.async.ts,keyword.control.flow.ts",
+      scope: "storage.modifier.async,keyword.control.flow",
       settings: {
         foreground: "#ccc",
       },
     },
+
     {
       name: "true false",
-      scope: "constant.language.boolean.true.ts,constant.language.boolean.false.ts",
+      scope: "constant.language.boolean.true,constant.language.boolean.false",
       settings: {
-        foreground: "#7d00b6",
+        foreground: palette.purple,
+      },
+    },
+    {
+      name: "super keyword",
+      scope: "variable.language.super.ts",
+      settings: {
+        foreground: palette.red,
+      },
+    },
+
+    {
+      name: "interface name + class name",
+      scope: [
+        "interface",
+        "entity.name.type.interface",
+        "entity.name.type",
+        "entity.name.type.class.ts",
+        "entity.other.inherited-class.ts",
+        "entity.name.type.ts",
+        "support.type.primitive.ts"
+      ],
+      settings: {
+        foreground: palette.pink,
+        fontStyle: "italic",
       },
     },
   ];
