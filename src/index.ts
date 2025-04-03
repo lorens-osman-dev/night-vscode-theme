@@ -1,5 +1,5 @@
 import type { TColors } from "@/types/colors";
-import { colors } from "@/themeParts/colorsObject/colorsObject";
-import colorsSectionObject from "./themeParts/colorsJson/colorsSectionObject";
+import { palettes } from "@/palettes";
+import colorsSectionObject from "./themeParts/colorsSection/colorsSectionObject";
 
 console.log(" colorsJson:", colorsSectionObject);

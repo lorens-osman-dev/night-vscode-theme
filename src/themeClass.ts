@@ -1,5 +1,5 @@
-import colorsSectionObject from "./themeParts/colorsJson/colorsSectionObject";
-import { colors } from "./themeParts/colorsObject/colorsObject";
+import colorsSectionObject from "./themeParts/colorsSection/colorsSectionObject";
+import { palettes } from "./palettes";
 import type { THexColor, TColorPalette } from "./types/colors";
 
 export default class ThemeClass {
@@ -27,5 +27,5 @@ export default class ThemeClass {
   }
 }
 
-const tt = new ThemeClass(colors.base);
+const tt = new ThemeClass(palettes.base);
 console.log(tt.colorsSectionObject);
