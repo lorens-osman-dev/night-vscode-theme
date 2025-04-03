@@ -1,10 +1,10 @@
-import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
+import type { TColorPalette, THexColor } from "@/types/colors";
 
-const editorMarkerNavigation = {
-  "editorMarkerNavigation.background": colors.base.background,
-  "editorMarkerNavigationError.background": "#f48771",
-  "editorMarkerNavigationWarning.background": "#cca700",
-  "editorMarkerNavigationInfo.background": "#75beff",
-};
-
-export default editorMarkerNavigation;
+export default function editorMarkerNavigation(palette: TColorPalette): { [key: string]: THexColor } {
+  return {
+    "editorMarkerNavigation.background": palette.background,
+    "editorMarkerNavigationError.background": "#f48771",
+    "editorMarkerNavigationWarning.background": "#cca700",
+    "editorMarkerNavigationInfo.background": "#75beff",
+  };
+}

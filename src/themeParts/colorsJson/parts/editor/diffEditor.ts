@@ -1,9 +1,10 @@
-import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
+import type { TColorPalette, THexColor } from "@/types/colors";
+import U from "@/util/U";
 
-const diffEditor = {
-  "diffEditor.insertedTextBackground": alpha(colors.base.green, 0.2),
-  "diffEditor.removedTextBackground": alpha(colors.base.red, 0.2),
-  "diffEditor.border": "#444444",
-};
-
-export default diffEditor;
+export default function diffEditor(palette: TColorPalette): { [key: string]: THexColor } {
+  return {
+    "diffEditor.insertedTextBackground": U.alpha(palette.green, 0.2),
+    "diffEditor.removedTextBackground": U.alpha(palette.red, 0.2),
+    "diffEditor.border": "#444444",
+  };
+}

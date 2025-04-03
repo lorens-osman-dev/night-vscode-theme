@@ -1,29 +1,29 @@
-import { colors, alpha } from "@/themeParts/colorsObject/colorsObject";
+import type { TColorPalette, THexColor } from "@/types/colors";
 
-const general = {
-  foreground: colors.base.foreground,
-  focusBorder: colors.base.background,
-  "progressBar.background": "#1d426f",
-  "selection.background": "#256aa7",
-  "scrollbar.shadow": colors.base.transparent,
-  "textLink.foreground": colors.base.blue,
+export default function general(palette: TColorPalette): { [key: string]: THexColor } {
+  return {
+    foreground: palette.foreground,
+    focusBorder: palette.background,
+    "progressBar.background": "#1d426f",
+    "selection.background": "#256aa7",
+    "scrollbar.shadow": palette.transparent,
+    "textLink.foreground": palette.blue,
 
-  "icon.foreground": colors.base.foreground,
+    "icon.foreground": palette.foreground,
 
-  "checkbox.background": colors.base.background,
-  "checkbox.foreground": colors.base.foreground,
-  "checkbox.border": colors.base.transparent,
+    "checkbox.background": palette.background,
+    "checkbox.foreground": palette.foreground,
+    "checkbox.border": palette.transparent,
 
-  "dropdown.background": colors.base.background,
-  "dropdown.foreground": colors.base.foreground,
-  "dropdown.border": colors.base.transparent,
+    "dropdown.background": palette.background,
+    "dropdown.foreground": palette.foreground,
+    "dropdown.border": palette.transparent,
 
-  "settings.headerForeground": colors.base.foreground,
-  "settings.focusedRowBackground": "#ffffff07",
+    "settings.headerForeground": palette.foreground,
+    "settings.focusedRowBackground": "#ffffff07",
 
-  "walkThrough.embeddedEditorBackground": "#00000050",
+    "walkThrough.embeddedEditorBackground": "#00000050",
 
-  "quickInput.background": colors.base.BackgroundSecond,
-};
-
-export default general;
+    "quickInput.background": palette.BackgroundSecond,
+  };
+}

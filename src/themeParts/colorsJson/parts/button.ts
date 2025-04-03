@@ -1,12 +1,13 @@
-import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
+import type { TColorPalette, THexColor } from "@/types/colors";
+import U from "@/util/U";
 
-const button = {
-  "button.background": colors.base.background,
-  "button.foreground": colors.base.white,
-  "button.hoverBackground": alpha(colors.base.green, 0.58),
-  "button.secondaryForeground": colors.base.white,
-  "button.secondaryBackground": "#3a3d4176",
-  "button.secondaryHoverBackground": "#45494ecf",
-};
-
-export default button;
+export default function button(palette: TColorPalette): { [key: string]: THexColor } {
+  return {
+    "button.background": palette.background,
+    "button.foreground": palette.white,
+    "button.hoverBackground": U.alpha(palette.green, 0.58),
+    "button.secondaryForeground": palette.white,
+    "button.secondaryBackground": "#3a3d4176",
+    "button.secondaryHoverBackground": "#45494ecf",
+  };
+}

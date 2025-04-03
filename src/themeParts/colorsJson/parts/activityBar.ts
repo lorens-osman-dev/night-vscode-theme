@@ -1,13 +1,11 @@
-import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
+import type { TColorPalette, THexColor } from "@/types/colors";
 
-const activityBar = {
-  "activityBar.foreground": colors.base.green,
-  "activityBar.background": colors.base.background,
-  "activityBar.inactiveForeground": "#ffffff66",
-  "activityBarBadge.foreground": colors.base.background,
-  "activityBarBadge.background": colors.base.yellow,
-  "activityBar.border": colors.base.transparent,
-  "activityBar.activeBackground": colors.base.BackgroundSecond,
-};
-
-export default activityBar;
+export default function titleBar(palette: TColorPalette): { [key: string]: THexColor } {
+  return {
+    "titleBar.activeBackground": palette.background,
+    "titleBar.activeForeground": palette.foreground,
+    "titleBar.inactiveBackground": palette.background,
+    "titleBar.inactiveForeground": "#cccccc99",
+    "titleBar.border": palette.transparent,
+  };
+}

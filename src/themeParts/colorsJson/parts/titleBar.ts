@@ -1,11 +1,11 @@
-import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
+import type { TColorPalette, THexColor } from "@/types/colors";
 
-const titleBar = {
-  "titleBar.activeBackground": colors.base.background,
-  "titleBar.activeForeground": colors.base.foreground,
-  "titleBar.inactiveBackground": colors.base.background,
-  "titleBar.inactiveForeground": "#cccccc99",
-  "titleBar.border": colors.base.transparent,
-};
-
-export default titleBar;
+export default function titleBar(palette: TColorPalette): { [key: string]: THexColor } {
+  return {
+    "titleBar.activeBackground": palette.background,
+    "titleBar.activeForeground": palette.foreground,
+    "titleBar.inactiveBackground": palette.background,
+    "titleBar.inactiveForeground": "#cccccc99",
+    "titleBar.border": palette.transparent,
+  };
+}

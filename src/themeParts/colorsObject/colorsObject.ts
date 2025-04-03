@@ -1,6 +1,6 @@
 import colorEdit from "color";
 import type { THexColor, TColors } from "../../types/colors";
-import colorsJson from "../colorsJson/colorsJson";
+import colorsSectionObject from "../colorsJson/colorsSectionObject";
 
 export function alpha(color: THexColor, alphaChannel: number) {
   return colorEdit(color).alpha(alphaChannel).hexa();

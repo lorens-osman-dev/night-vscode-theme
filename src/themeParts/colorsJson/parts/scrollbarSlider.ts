@@ -1,9 +1,9 @@
-import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
+import type { TColorPalette, THexColor } from "@/types/colors";
 
-const scrollbarSlider = {
-  "scrollbarSlider.background": "#79797966",
-  "scrollbarSlider.hoverBackground": "#646464b3",
-  "scrollbarSlider.activeBackground": "#bfbfbf66",
-};
-
-export default scrollbarSlider;
+export default function scrollbarSlider(palette: TColorPalette): { [key: string]: THexColor } {
+  return {
+    "scrollbarSlider.background": "#79797966",
+    "scrollbarSlider.hoverBackground": "#646464b3",
+    "scrollbarSlider.activeBackground": "#bfbfbf66",
+  };
+}

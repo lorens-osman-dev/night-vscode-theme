@@ -1,9 +1,10 @@
-import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
+import type { TColorPalette, THexColor } from "@/types/colors";
+import U from "@/util/U";
 
-const editorHoverWidget = {
-  "editorHoverWidget.foreground": colors.base.foreground,
-  "editorHoverWidget.background": alpha(colors.base.BackgroundSecond, 0.827),
-  "editorHoverWidget.border": colors.base.background,
-};
-
-export default editorHoverWidget;
+export default function editorHoverWidget(palette: TColorPalette): { [key: string]: THexColor } {
+  return {
+    "editorHoverWidget.foreground": palette.foreground,
+    "editorHoverWidget.background": U.alpha(palette.BackgroundSecond, 0.827),
+    "editorHoverWidget.border": palette.background,
+  };
+}

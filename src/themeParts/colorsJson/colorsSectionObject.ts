@@ -1,3 +1,4 @@
+import type { TColorPalette, THexColor } from "@/types/colors";
 import activityBar from "./parts/activityBar";
 import breadcrumb from "./parts/breadcrumb";
 import button from "./parts/button";
@@ -15,23 +16,23 @@ import terminal from "./parts/terminal";
 import titleBar from "./parts/titleBar";
 import widgets from "./parts/widgets";
 
-const colorsJson = {
-  ...general,
-  ...activityBar,
-  ...sideBar,
-  ...editorGeneral,
-  ...breadcrumb,
-  ...button,
-  ...gitDecoration,
-  ...input,
-  ...menubar,
-  ...notifications,
-  ...scrollbarSlider,
-  ...statusBar,
-  ...tab,
-  ...terminal,
-  ...titleBar,
-  ...widgets,
-};
-
-export default colorsJson;
+export default function colorsSectionObject(palette: TColorPalette): { [key: string]: THexColor } {
+  return {
+    ...general(palette),
+    ...activityBar(palette),
+    ...sideBar(palette),
+    ...editorGeneral(palette),
+    ...breadcrumb(palette),
+    ...button(palette),
+    ...gitDecoration(palette),
+    ...input(palette),
+    ...menubar(palette),
+    ...notifications(palette),
+    ...scrollbarSlider(palette),
+    ...statusBar(palette),
+    ...tab(palette),
+    ...terminal(palette),
+    ...titleBar(palette),
+    ...widgets(palette),
+  };
+}

@@ -1,16 +1,16 @@
-import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
+import type { TColorPalette, THexColor } from "@/types/colors";
 
-const widgets = {
-  "widget.shadow": colors.base.background,
-  "editorWidget.foreground": colors.base.foreground,
-  "editorWidget.background": colors.base.BackgroundSecond,
-  "editorWidget.resizeBorder": colors.base.greenSecond,
-  "pickerGroup.border": colors.base.comments,
-  "pickerGroup.foreground": colors.base.comments,
-  "debugToolBar.background": colors.base.background,
-  "debugToolBar.border": colors.base.comments,
-  "debugExceptionWidget.background": colors.base.background,
-  "debugExceptionWidget.border": colors.base.comments,
-};
-
-export default widgets;
+export default function widgets(palette: TColorPalette): { [key: string]: THexColor } {
+  return {
+    "widget.shadow": palette.background,
+    "editorWidget.foreground": palette.foreground,
+    "editorWidget.background": palette.BackgroundSecond,
+    "editorWidget.resizeBorder": palette.greenSecond,
+    "pickerGroup.border": palette.comments,
+    "pickerGroup.foreground": palette.comments,
+    "debugToolBar.background": palette.background,
+    "debugToolBar.border": palette.comments,
+    "debugExceptionWidget.background": palette.background,
+    "debugExceptionWidget.border": palette.comments,
+  };
+}

@@ -1,11 +1,12 @@
-import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
+import type { TColorPalette, THexColor } from "@/types/colors";
+import U from "@/util/U";
 
-const editorSuggestWidget = {
-  "editorSuggestWidget.background": alpha(colors.base.BackgroundSecond, 0.827),
-  "editorSuggestWidget.border": colors.base.background,
-  "editorSuggestWidget.foreground": colors.base.foreground,
-  "editorSuggestWidget.highlightForeground": colors.base.green,
-  "editorSuggestWidget.selectedBackground": colors.base.BackgroundSecond,
-};
-
-export default editorSuggestWidget;
+export default function editorSuggestWidget(palette: TColorPalette): { [key: string]: THexColor } {
+  return {
+    "editorSuggestWidget.background": U.alpha(palette.BackgroundSecond, 0.827),
+    "editorSuggestWidget.border": palette.background,
+    "editorSuggestWidget.foreground": palette.foreground,
+    "editorSuggestWidget.highlightForeground": palette.green,
+    "editorSuggestWidget.selectedBackground": palette.BackgroundSecond,
+  };
+}

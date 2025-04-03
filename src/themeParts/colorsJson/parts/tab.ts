@@ -1,20 +1,20 @@
-import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
+import type { TColorPalette, THexColor } from "@/types/colors";
 
-const tab = {
-  "editorGroupHeader.tabsBackground": colors.base.BackgroundSecond,
-  "editorGroupHeader.tabsBorder": colors.base.transparent,
-  "editorGroup.emptyBackground": colors.base.background,
-  "editorGroupHeader.border": colors.base.transparent,
-  "tab.activeForeground": colors.base.foreground,
-  "tab.border": colors.base.background,
-  "tab.activeBackground": colors.base.background,
-  "tab.activeBorder": colors.base.transparent,
-  "tab.activeBorderTop": colors.base.green,
-  "tab.inactiveBackground": colors.base.BackgroundSecond,
-  "tab.inactiveForeground": "#ffffff80",
-  "tab.hoverBackground": colors.base.background,
-  "tab.hoverBorder": colors.base.transparent,
-  "editorGroup.border": "#444444",
-};
-
-export default tab;
+export default function tab(palette: TColorPalette): { [key: string]: THexColor } {
+  return {
+    "editorGroupHeader.tabsBackground": palette.BackgroundSecond,
+    "editorGroupHeader.tabsBorder": palette.transparent,
+    "editorGroup.emptyBackground": palette.background,
+    "editorGroupHeader.border": palette.transparent,
+    "tab.activeForeground": palette.foreground,
+    "tab.border": palette.background,
+    "tab.activeBackground": palette.background,
+    "tab.activeBorder": palette.transparent,
+    "tab.activeBorderTop": palette.green,
+    "tab.inactiveBackground": palette.BackgroundSecond,
+    "tab.inactiveForeground": "#ffffff80",
+    "tab.hoverBackground": palette.background,
+    "tab.hoverBorder": palette.transparent,
+    "editorGroup.border": "#444444",
+  };
+}
