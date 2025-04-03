@@ -18,6 +18,11 @@
         "label": "Night Shift",
         "uiTheme": "vs-dark",
         "path": "./themes/night-shift-theme.json"
+      },
+      {
+        "label": "Glass",
+        "uiTheme": "vs-dark",
+        "path": "./themes/glass-theme.json"
       }
     ]
   },
