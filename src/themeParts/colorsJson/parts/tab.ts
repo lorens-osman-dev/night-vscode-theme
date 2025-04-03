@@ -1,19 +1,19 @@
 import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
 
 const tab = {
-  "editorGroupHeader.tabsBackground": colors.nightVali.BackgroundSecond,
-  "editorGroupHeader.tabsBorder": colors.nightVali.transparent,
-  "editorGroup.emptyBackground": colors.nightVali.background,
-  "editorGroupHeader.border": colors.nightVali.transparent,
-  "tab.activeForeground": colors.nightVali.foreground,
-  "tab.border": colors.nightVali.background,
-  "tab.activeBackground": colors.nightVali.background,
-  "tab.activeBorder": colors.nightVali.transparent,
-  "tab.activeBorderTop": colors.nightVali.green,
-  "tab.inactiveBackground": colors.nightVali.BackgroundSecond,
+  "editorGroupHeader.tabsBackground": colors.base.BackgroundSecond,
+  "editorGroupHeader.tabsBorder": colors.base.transparent,
+  "editorGroup.emptyBackground": colors.base.background,
+  "editorGroupHeader.border": colors.base.transparent,
+  "tab.activeForeground": colors.base.foreground,
+  "tab.border": colors.base.background,
+  "tab.activeBackground": colors.base.background,
+  "tab.activeBorder": colors.base.transparent,
+  "tab.activeBorderTop": colors.base.green,
+  "tab.inactiveBackground": colors.base.BackgroundSecond,
   "tab.inactiveForeground": "#ffffff80",
-  "tab.hoverBackground": colors.nightVali.background,
-  "tab.hoverBorder": colors.nightVali.transparent,
+  "tab.hoverBackground": colors.base.background,
+  "tab.hoverBorder": colors.base.transparent,
   "editorGroup.border": "#444444",
 };
 

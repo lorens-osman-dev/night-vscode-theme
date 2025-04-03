@@ -1,13 +1,13 @@
 import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
 
 const activityBar = {
-  "activityBar.foreground": colors.nightVali.green,
-  "activityBar.background": colors.nightVali.background,
+  "activityBar.foreground": colors.base.green,
+  "activityBar.background": colors.base.background,
   "activityBar.inactiveForeground": "#ffffff66",
-  "activityBarBadge.foreground": colors.nightVali.background,
-  "activityBarBadge.background": colors.nightVali.yellow,
-  "activityBar.border": colors.nightVali.transparent,
-  "activityBar.activeBackground": colors.nightVali.BackgroundSecond,
+  "activityBarBadge.foreground": colors.base.background,
+  "activityBarBadge.background": colors.base.yellow,
+  "activityBar.border": colors.base.transparent,
+  "activityBar.activeBackground": colors.base.BackgroundSecond,
 };
 
 export default activityBar;

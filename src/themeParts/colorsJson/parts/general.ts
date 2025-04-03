@@ -1,29 +1,29 @@
 import { colors, alpha } from "@/themeParts/colorsObject/colorsObject";
 
 const general = {
-  foreground: colors.nightVali.foreground,
-  focusBorder: colors.nightVali.background,
+  foreground: colors.base.foreground,
+  focusBorder: colors.base.background,
   "progressBar.background": "#1d426f",
   "selection.background": "#256aa7",
-  "scrollbar.shadow": colors.nightVali.transparent,
-  "textLink.foreground": colors.nightVali.blue,
+  "scrollbar.shadow": colors.base.transparent,
+  "textLink.foreground": colors.base.blue,
 
-  "icon.foreground": colors.nightVali.foreground,
+  "icon.foreground": colors.base.foreground,
 
-  "checkbox.background": colors.nightVali.background,
-  "checkbox.foreground": colors.nightVali.foreground,
-  "checkbox.border": colors.nightVali.transparent,
+  "checkbox.background": colors.base.background,
+  "checkbox.foreground": colors.base.foreground,
+  "checkbox.border": colors.base.transparent,
 
-  "dropdown.background": colors.nightVali.background,
-  "dropdown.foreground": colors.nightVali.foreground,
-  "dropdown.border": colors.nightVali.transparent,
+  "dropdown.background": colors.base.background,
+  "dropdown.foreground": colors.base.foreground,
+  "dropdown.border": colors.base.transparent,
 
-  "settings.headerForeground": colors.nightVali.foreground,
+  "settings.headerForeground": colors.base.foreground,
   "settings.focusedRowBackground": "#ffffff07",
 
   "walkThrough.embeddedEditorBackground": "#00000050",
 
-  "quickInput.background": colors.nightVali.BackgroundSecond,
+  "quickInput.background": colors.base.BackgroundSecond,
 };
 
 export default general;

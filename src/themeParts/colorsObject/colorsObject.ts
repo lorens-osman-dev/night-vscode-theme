@@ -1,46 +1,13 @@
 import colorEdit from "color";
+import type { THexColor, TColors } from "../../types/colors";
+import colorsJson from "../colorsJson/colorsJson";
+
 export function alpha(color: THexColor, alphaChannel: number) {
   return colorEdit(color).alpha(alphaChannel).hexa();
 }
 
-export type THexColor = `#${string}`;
-
-export type TPalette = {
-  transparent: THexColor;
-
-  white: THexColor;
-  yellow: THexColor;
-  red: THexColor;
-  blue: THexColor;
-  green: THexColor;
-  greenSecond: THexColor;
-  purple: THexColor;
-
-  background: THexColor;
-  BackgroundSecond: THexColor;
-  foreground: THexColor;
-  comments: THexColor;
-
-  strings: () => THexColor;
-  numbers: () => THexColor;
-  variables: () => THexColor;
-  properties: () => THexColor;
-  keywords: () => THexColor;
-  classes: () => THexColor;
-  constants: () => THexColor;
-  functions: () => THexColor;
-  methods: () => THexColor;
-  operators: () => THexColor;
-  specialFunctions: () => THexColor;
-};
-
-type TColors = {
-  nightVali: TPalette;
-  nightShift?: TPalette;
-};
-
 export const colors: TColors = {
-  nightVali: {
+  base: {
     transparent: "#00000000",
 
     white: "#ffffff",
@@ -56,20 +23,16 @@ export const colors: TColors = {
     foreground: "#cbd5e1",
     comments: "#64748b",
 
-    strings: () => colors.nightVali.yellow,
-    numbers: () => colors.nightVali.purple,
-    variables: () => colors.nightVali.foreground,
-    properties: () => colors.nightVali.foreground,
-    keywords: () => colors.nightVali.greenSecond,
-    classes: () => colors.nightVali.blue,
-    constants: () => colors.nightVali.blue,
-    functions: () => colors.nightVali.green,
-    methods: () => colors.nightVali.green,
-    operators: () => colors.nightVali.red,
-    specialFunctions: () => colors.nightVali.red,
+    strings: () => colors.base.yellow,
+    numbers: () => colors.base.purple,
+    variables: () => colors.base.foreground,
+    properties: () => colors.base.foreground,
+    keywords: () => colors.base.greenSecond,
+    classes: () => colors.base.blue,
+    constants: () => colors.base.blue,
+    functions: () => colors.base.green,
+    methods: () => colors.base.green,
+    operators: () => colors.base.red,
+    specialFunctions: () => colors.base.red,
   },
 };
-// [ ] remove it
-// c084fc40
-// const test = alpha(colors.nightVali.yellow, 0.314);
-// console.log(test);

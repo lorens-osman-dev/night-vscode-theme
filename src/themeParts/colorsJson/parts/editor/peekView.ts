@@ -6,15 +6,15 @@ const peekView = {
   "peekViewEditorGutter.background": "#001f33",
   "peekViewEditor.matchHighlightBackground": "#ff8f0099",
   "peekViewEditor.matchHighlightBorder": "#ee931e",
-  "peekViewResult.background": colors.nightVali.BackgroundSecond,
-  "peekViewResult.fileForeground": colors.nightVali.white,
+  "peekViewResult.background": colors.base.BackgroundSecond,
+  "peekViewResult.fileForeground": colors.base.white,
   "peekViewResult.lineForeground": "#bbbbbb",
   "peekViewResult.matchHighlightBackground": "#ea5c004d",
   "peekViewResult.selectionBackground": "#3399ff33",
-  "peekViewResult.selectionForeground": colors.nightVali.white,
-  "peekViewTitle.background": colors.nightVali.BackgroundSecond,
+  "peekViewResult.selectionForeground": colors.base.white,
+  "peekViewTitle.background": colors.base.BackgroundSecond,
   "peekViewTitleDescription.foreground": "#ccccccb3",
-  "peekViewTitleLabel.foreground": colors.nightVali.white,
+  "peekViewTitleLabel.foreground": colors.base.white,
 };
 
 export default peekView;

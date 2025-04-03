@@ -1,7 +1,8 @@
-import { alpha, colors, type TPalette } from "./colorsObject";
+import type { TPalette } from "@/types/colors";
+import { alpha, colors } from "../themeParts/colorsObject/colorsObject";
 
 // Function to extract alpha from 8-digit hex
-function extractAlpha(hexColor, colorName: keyof TPalette) {
+export default function extractAlpha(hexColor, colorName: keyof TPalette) {
   // Remove # if present
   const hex = hexColor.replace("#", "");
 
@@ -15,7 +16,7 @@ function extractAlpha(hexColor, colorName: keyof TPalette) {
   const alphaPercent = ((alphaDec / 255) * 100).toFixed(2);
   const inNumber = Number.parseFloat((alphaDec / 255).toFixed(3));
   //@ts-ignore
-  const wantedColor = alpha(colors.nightVali[colorName], inNumber);
+  const wantedColor = alpha(colors.base[colorName], inNumber);
 
   if (wantedColor === hexColor.toUpperCase()) {
     console.log("✓✓");
@@ -29,4 +30,4 @@ function extractAlpha(hexColor, colorName: keyof TPalette) {
 }
 
 // Example usage
-extractAlpha("#132132d3", "BackgroundSecond");
+// extractAlpha("#132132d3", "BackgroundSecond");

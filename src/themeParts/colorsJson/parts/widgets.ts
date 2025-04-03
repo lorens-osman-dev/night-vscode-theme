@@ -1,16 +1,16 @@
 import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
 
 const widgets = {
-  "widget.shadow": colors.nightVali.background,
-  "editorWidget.foreground": colors.nightVali.foreground,
-  "editorWidget.background": colors.nightVali.BackgroundSecond,
-  "editorWidget.resizeBorder": colors.nightVali.greenSecond,
-  "pickerGroup.border": colors.nightVali.comments,
-  "pickerGroup.foreground": colors.nightVali.comments,
-  "debugToolBar.background": colors.nightVali.background,
-  "debugToolBar.border": colors.nightVali.comments,
-  "debugExceptionWidget.background": colors.nightVali.background,
-  "debugExceptionWidget.border": colors.nightVali.comments,
+  "widget.shadow": colors.base.background,
+  "editorWidget.foreground": colors.base.foreground,
+  "editorWidget.background": colors.base.BackgroundSecond,
+  "editorWidget.resizeBorder": colors.base.greenSecond,
+  "pickerGroup.border": colors.base.comments,
+  "pickerGroup.foreground": colors.base.comments,
+  "debugToolBar.background": colors.base.background,
+  "debugToolBar.border": colors.base.comments,
+  "debugExceptionWidget.background": colors.base.background,
+  "debugExceptionWidget.border": colors.base.comments,
 };
 
 export default widgets;

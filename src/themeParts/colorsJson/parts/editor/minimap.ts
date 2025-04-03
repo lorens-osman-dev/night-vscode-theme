@@ -6,9 +6,9 @@ const minimap = {
   "minimapGutter.deletedBackground": "#94151b",
   "minimap.findMatchHighlight": "#386496",
   "minimap.selectionHighlight": "#264f78",
-  "minimap.errorHighlight": colors.nightVali.red,
-  "minimap.warningHighlight": alpha(colors.nightVali.yellow, 0.314),
-  "minimap.background": colors.nightVali.background,
+  "minimap.errorHighlight": colors.base.red,
+  "minimap.warningHighlight": alpha(colors.base.yellow, 0.314),
+  "minimap.background": colors.base.background,
 };
 
 export default minimap;

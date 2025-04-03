@@ -1,17 +1,17 @@
 import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
 
 const statusBar = {
-  "statusBar.foreground": colors.nightVali.white,
-  "statusBar.background": colors.nightVali.background,
+  "statusBar.foreground": colors.base.white,
+  "statusBar.background": colors.base.background,
   "statusBarItem.hoverBackground": "#ffffff1f",
 
-  "statusBar.border": colors.nightVali.transparent,
+  "statusBar.border": colors.base.transparent,
   "statusBar.debuggingBackground": "#cc6633",
-  "statusBar.debuggingForeground": colors.nightVali.white,
+  "statusBar.debuggingForeground": colors.base.white,
   "statusBar.noFolderBackground": "#68217a",
-  "statusBar.noFolderForeground": colors.nightVali.white,
+  "statusBar.noFolderForeground": colors.base.white,
   "statusBarItem.remoteBackground": "#16825d",
-  "statusBarItem.remoteForeground": colors.nightVali.white,
+  "statusBarItem.remoteForeground": colors.base.white,
   "statusBarItem.activeBackground": "#FFFFFF25",
 };
 

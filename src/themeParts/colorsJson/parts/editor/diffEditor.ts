@@ -1,8 +1,8 @@
 import { alpha, colors } from "@/themeParts/colorsObject/colorsObject";
 
 const diffEditor = {
-  "diffEditor.insertedTextBackground": alpha(colors.nightVali.green, 0.2),
-  "diffEditor.removedTextBackground": alpha(colors.nightVali.red, 0.2),
+  "diffEditor.insertedTextBackground": alpha(colors.base.green, 0.2),
+  "diffEditor.removedTextBackground": alpha(colors.base.red, 0.2),
   "diffEditor.border": "#444444",
 };
 
