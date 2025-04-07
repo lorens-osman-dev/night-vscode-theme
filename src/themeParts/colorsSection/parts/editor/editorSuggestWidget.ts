@@ -7,6 +7,12 @@ export default function editorSuggestWidget(palette: TColorPalette): { [key: str
     "editorSuggestWidget.border": palette.background,
     "editorSuggestWidget.foreground": palette.foreground,
     "editorSuggestWidget.highlightForeground": palette.green,
-    "editorSuggestWidget.selectedBackground": palette.BackgroundSecond,
+    "editorSuggestWidget.selectedBackground": U.alpha(palette.green, 0.25),
+    "editorSuggestWidget.focusHighlightForeground": palette.green,
+    "editorSuggestWidgetStatus.foreground": palette.red,
+    /*
+    "editorSuggestWidget.selectedIconForeground":palette.green,
+    "editorSuggestWidget.selectedForeground":palette.red,
+    */
   };
 }

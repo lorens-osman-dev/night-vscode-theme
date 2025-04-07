@@ -8,7 +8,7 @@ export default class ThemeClass {
   colorsSectionJson: string;
   tokenColorsSectionObject: TTextMateRule[];
   tokenColorsSectionJson: string;
-  constructor(palette: TColorPalette) {
+  constructor(palette: TColorPalette, tokenColors?: TTextMateRule[]) {
     this.colorPallette = palette;
 
     this.colorPallette.strings = this.colorPallette.yellow;
@@ -28,6 +28,10 @@ export default class ThemeClass {
 
     this.tokenColorsSectionObject = tokenColorsSectionObject(this.colorPallette);
     this.tokenColorsSectionJson = JSON.stringify(this.tokenColorsSectionObject);
+    if (tokenColors) {
+      this.tokenColorsSectionObject = tokenColors;
+      this.tokenColorsSectionJson = JSON.stringify(tokenColors);
+    }
   }
   themeResult(templateName: string) {
     return {

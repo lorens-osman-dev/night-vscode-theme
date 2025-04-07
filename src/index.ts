@@ -1,12 +1,13 @@
 import ThemeClass from "./themeClass";
 import { palettes } from "@/palettes";
 import U from "./util/U";
+import { colorTokens } from "./themeParts/tokenColorsSection/readyColorTokens";
 
 const nightVali = new ThemeClass(palettes.base);
 const nightValiResult = nightVali.themeResult("nightVali");
 U.writeThemeToJson(nightValiResult, "night-vali-theme");
 
-const nightShift = new ThemeClass(palettes.base);
+const nightShift = new ThemeClass(palettes.base, colorTokens);
 const nightShiftResult = nightShift.themeResult("Night Shift");
 U.writeThemeToJson(nightShiftResult, "night-shift-theme");
 

@@ -17,7 +17,6 @@ export const palettes: { [key: string]: TColorPalette } = {
     pink: "#e64392",
     orange: "#f8a172",
     brown: "#936741",
-
     background: "#111827",
     BackgroundSecond: "#132132",
     foreground: "#cbd5e1",
