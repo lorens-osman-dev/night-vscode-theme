@@ -8,7 +8,7 @@ export default function sideBar(palette: TColorPalette): { [key: string]: THexCo
     "sideBarSectionHeader.background": palette.transparent,
     "sideBarSectionHeader.foreground": palette.yellow,
     "sideBarSectionHeader.border": palette.transparent,
-    "sideBarTitle.foreground": palette.red,
+    "sideBarTitle.foreground": palette.green,
     "sideBar.border": palette.transparent,
 
     "list.inactiveSelectionBackground": palette.background,
