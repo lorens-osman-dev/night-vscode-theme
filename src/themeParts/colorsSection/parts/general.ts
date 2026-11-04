@@ -1,7 +1,7 @@
 import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 
 export default function general(palette: TColorPalette): TThemeColorMap {
-  return {
+  const obj: TThemeColorMap = {
     foreground: palette.foreground,
     focusBorder: palette.background,
     "progressBar.background": "#1d426f",
@@ -26,4 +26,16 @@ export default function general(palette: TColorPalette): TThemeColorMap {
 
     "quickInput.background": palette.BackgroundSecond,
   };
+  if (palette.name && palette.name === "shahin") {
+    return {
+      ...obj,
+      "modernPanel.border": palette.gold,
+      "modernActivityBar.background": palette.gold,
+      "modernActivityBarItem.hoverBackground": palette.BackgroundSecond,
+      "activityBar.activeBackground": palette.BackgroundSecond,
+      focusBorder: palette.gold,
+      "list.hoverBackground": palette.gold,
+    };
+  }
+  return obj;
 }

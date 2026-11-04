@@ -18,7 +18,6 @@ import widgets from "./parts/widgets";
 
 export default function colorsSectionObject(palette: TColorPalette): { [key: string]: THexColor } {
   return {
-    ...general(palette),
     ...activityBar(palette),
     ...sideBar(palette),
     ...editorGeneral(palette),
@@ -34,5 +33,6 @@ export default function colorsSectionObject(palette: TColorPalette): { [key: str
     ...terminal(palette),
     ...titleBar(palette),
     ...widgets(palette),
+    ...general(palette),
   };
 }

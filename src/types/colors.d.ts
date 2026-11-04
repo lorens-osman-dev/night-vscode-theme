@@ -27,7 +27,7 @@ export type TThemeColorMap = {
 
 export type TColorPalette = {
   transparent: THexColor;
-
+  name?: string;
   white: THexColor;
   yellow: THexColor;
   yellowBright: THexColor;

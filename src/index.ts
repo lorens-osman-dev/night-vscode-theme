@@ -19,6 +19,7 @@ const themes = [
   { name: "glass", palette: palettes.glass, tokenColors: colorTokensTest },
   { name: "glass2", palette: palettes.glass2, tokenColors: colorTokensOriginal },
   { name: "shahin", palette: palettes.shahin },
+  { name: "shahin2", palette: palettes.shahin, tokenColors: colorTokensOriginal },
   { name: "darko", palette: palettes.darko, tokenColors: colorTokensOriginal },
   { name: "test", palette: palettes.test, tokenColors: colorTokensTest },
 ];
