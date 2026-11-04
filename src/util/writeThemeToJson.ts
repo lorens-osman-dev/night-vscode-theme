@@ -7,6 +7,7 @@ function writeThemeToJson(data: any, filename: string): void {
     const projectRoot = path.join(__dirname, "../../themes"); // Go up one level to the project root
     const filePath = path.join(projectRoot, `${filename}.json`);
 
+    fs.mkdirSync(projectRoot, { recursive: true });
     fs.writeFileSync(filePath, jsonString);
     console.log(`Successfully wrote theme to ${filename}.json`);
   } catch (err) {

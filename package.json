@@ -6,11 +6,13 @@
   "engines": {
     "vscode": "^1.98.0"
   },
-  "categories": ["Themes"],
+  "categories": [
+    "Themes"
+  ],
   "contributes": {
     "themes": [
       {
-        "label": "Night vali",
+        "label": "Night Vali",
         "uiTheme": "vs-dark",
         "path": "./themes/night-vali-theme.json"
       },
@@ -20,9 +22,14 @@
         "path": "./themes/night-shift-theme.json"
       },
       {
-        "label": "Glass",
+        "label": "Night Glass",
         "uiTheme": "vs-dark",
-        "path": "./themes/glass-theme.json"
+        "path": "./themes/night-glass-theme.json"
+      },
+      {
+        "label": "Night Glass2",
+        "uiTheme": "vs-dark",
+        "path": "./themes/night-glass2-theme.json"
       }
     ]
   },
@@ -37,6 +44,6 @@
   "scripts": {
     "watch": "bun --watch src/*",
     "prepare": "husky",
-    "vsce": "vsce package"
+    "vsce": "bun run src/index.ts && vsce package"
   }
 }

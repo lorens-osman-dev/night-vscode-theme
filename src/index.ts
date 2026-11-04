@@ -2,15 +2,33 @@ import ThemeClass from "./themeClass";
 import { palettes } from "@/palettes";
 import U from "./util/U";
 import { colorTokens } from "./themeParts/tokenColorsSection/readyColorTokens";
+import syncThemeContributions from "./util/syncThemeContributions";
 
-const nightVali = new ThemeClass(palettes.base);
-const nightValiResult = nightVali.themeResult("nightVali");
-U.writeThemeToJson(nightValiResult, "night-vali-theme");
+function generateName(name: string) {
+  const title = name.charAt(0).toUpperCase() + name.slice(1);
+  return {
+    name: `Night ${title}`,
+    fileName: `night-${name.toLowerCase()}-theme`,
+  };
+}
 
-const nightShift = new ThemeClass(palettes.base, colorTokens);
-const nightShiftResult = nightShift.themeResult("Night Shift");
-U.writeThemeToJson(nightShiftResult, "night-shift-theme");
+const themes = [
+  { name: "vali", palette: palettes.base },
+  { name: "shift", palette: palettes.base, tokenColors: colorTokens },
+  { name: "glass", palette: palettes.glass },
+  { name: "glass2", palette: palettes.glass2 },
+];
 
-const glass = new ThemeClass(palettes.glass);
-const glassResult = glass.themeResult("Glass");
-U.writeThemeToJson(glassResult, "glass-theme");
+const themeContributions = themes.map(({ name, palette, tokenColors }) => {
+  const metadata = generateName(name);
+  const theme = new ThemeClass(palette, tokenColors);
+  U.writeThemeToJson(theme.themeResult(metadata.name), metadata.fileName);
+
+  return {
+    label: metadata.name,
+    uiTheme: "vs-dark" as const,
+    path: `./themes/${metadata.fileName}.json`,
+  };
+});
+
+syncThemeContributions(themeContributions);
