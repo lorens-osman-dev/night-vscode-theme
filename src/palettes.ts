@@ -90,8 +90,8 @@ export const palettes: Record<PaletteName, TColorPalette> = {
   },
   test: {
     transparent: "#00000000",
-    red: "#e17f83",
 
+    red: "#e17f83",
     white: "#ffffff",
     gray: "#a7b2b8",
     yellow: "#b2a13c",
@@ -106,6 +106,7 @@ export const palettes: Record<PaletteName, TColorPalette> = {
     orange: "#d68d4b",
     brown: "#e18173",
     gold: "#b9a779",
+
     background: "#2f353c",
     BackgroundSecond: "#2f353c",
     foreground: "#d9dddc",
