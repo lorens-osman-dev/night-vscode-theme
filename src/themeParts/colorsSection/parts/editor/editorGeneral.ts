@@ -1,4 +1,4 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 import U from "@/util/U";
 import diffEditor from "./diffEditor";
 import editorHoverWidget from "./editorHoverWidget";
@@ -8,7 +8,7 @@ import merge from "./merge";
 import minimap from "./minimap";
 import peekView from "./peekView";
 
-export default function editorGeneral(palette: TColorPalette): { [key: string]: THexColor } {
+export default function editorGeneral(palette: TColorPalette): TThemeColorMap {
   return {
     ...diffEditor(palette),
     ...editorHoverWidget(palette),

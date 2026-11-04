@@ -1,6 +1,6 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 
-export default function terminal(palette: TColorPalette): { [key: string]: THexColor } {
+export default function terminal(palette: TColorPalette): TThemeColorMap {
   return {
     "panel.background": palette.background,
     "panelSection.border": palette.comments,

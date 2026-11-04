@@ -1,4 +1,5 @@
 import type { ThemeColor } from "vscode";
+import type { TVsCodeColorKey } from "./vscodeColorKeys";
 
 type TTextMateRule = {
   name?: string;
@@ -18,6 +19,11 @@ type TTextMateRule = {
   };
 };
 export type THexColor = `#${string}`;
+
+/** Any key VS Code's runtime color registry understands, with an optional hex value. */
+export type TThemeColorMap = {
+	[K in TVsCodeColorKey]?: THexColor;
+};
 
 export type TColorPalette = {
   transparent: THexColor;

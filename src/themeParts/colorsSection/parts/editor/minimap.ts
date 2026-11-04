@@ -1,7 +1,7 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 import U from "@/util/U";
 
-export default function minimap(palette: TColorPalette): { [key: string]: THexColor } {
+export default function minimap(palette: TColorPalette): TThemeColorMap {
   return {
     "minimapGutter.addedBackground": "#587c0c",
     "minimapGutter.modifiedBackground": "#0c7d9d",

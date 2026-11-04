@@ -1,7 +1,7 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 import U from "@/util/U";
 
-export default function editorHoverWidget(palette: TColorPalette): { [key: string]: THexColor } {
+export default function editorHoverWidget(palette: TColorPalette): TThemeColorMap {
   return {
     "editorHoverWidget.foreground": palette.foreground,
     "editorHoverWidget.background": U.alpha(palette.BackgroundSecond, 0.827),

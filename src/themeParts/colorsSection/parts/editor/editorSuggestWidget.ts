@@ -1,7 +1,7 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 import U from "@/util/U";
 
-export default function editorSuggestWidget(palette: TColorPalette): { [key: string]: THexColor } {
+export default function editorSuggestWidget(palette: TColorPalette): TThemeColorMap {
   return {
     "editorSuggestWidget.background": U.alpha(palette.BackgroundSecond, 0.827),
     "editorSuggestWidget.border": palette.background,

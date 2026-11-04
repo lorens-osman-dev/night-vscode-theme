@@ -1,6 +1,6 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 
-export default function editorMarkerNavigation(palette: TColorPalette): { [key: string]: THexColor } {
+export default function editorMarkerNavigation(palette: TColorPalette): TThemeColorMap {
   return {
     "editorMarkerNavigation.background": palette.background,
     "editorMarkerNavigationError.background": "#f48771",

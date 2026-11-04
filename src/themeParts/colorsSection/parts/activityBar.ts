@@ -1,6 +1,6 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 
-export default function titleBar(palette: TColorPalette): { [key: string]: THexColor } {
+export default function titleBar(palette: TColorPalette): TThemeColorMap {
   return {
     "titleBar.activeBackground": palette.background,
     "titleBar.activeForeground": palette.foreground,
@@ -14,6 +14,6 @@ export default function titleBar(palette: TColorPalette): { [key: string]: THexC
     "activityBarBadge.foreground": palette.background,
     "activityBarBadge.background": palette.yellow,
     "activityBar.border": palette.transparent,
-    "activityBar.activeBackground":palette.background,
+    "activityBar.activeBackground": palette.background,
   };
 }

@@ -1,6 +1,6 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 
-export default function general(palette: TColorPalette): { [key: string]: THexColor } {
+export default function general(palette: TColorPalette): TThemeColorMap {
   return {
     foreground: palette.foreground,
     focusBorder: palette.background,

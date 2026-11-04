@@ -1,6 +1,6 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 
-export default function gitDecoration(palette: TColorPalette): { [key: string]: THexColor } {
+export default function gitDecoration(palette: TColorPalette): TThemeColorMap {
   return {
     "gitDecoration.addedResourceForeground": "#81b88b",
     "gitDecoration.conflictingResourceForeground": "#6c6cc4",

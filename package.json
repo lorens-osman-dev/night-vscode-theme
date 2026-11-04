@@ -43,6 +43,8 @@
   },
   "scripts": {
     "watch": "bun --watch src/*",
+    "update-color-keys": "bun run scripts/generateVscodeColorKeys.ts",
+    "check": "tsc --noEmit -p tsconfig.check.json",
     "prepare": "husky",
     "vsce": "bun run src/index.ts && vsce package"
   }

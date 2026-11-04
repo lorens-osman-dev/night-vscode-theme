@@ -1,6 +1,6 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 
-export default function peekView(palette: TColorPalette): { [key: string]: THexColor } {
+export default function peekView(palette: TColorPalette): TThemeColorMap {
   return {
     "peekView.border": "#007acc",
     "peekViewEditor.background": "#001f33",

@@ -1,6 +1,6 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 
-export default function widgets(palette: TColorPalette): { [key: string]: THexColor } {
+export default function widgets(palette: TColorPalette): TThemeColorMap {
   return {
     "widget.shadow": palette.background,
     "editorWidget.foreground": palette.foreground,

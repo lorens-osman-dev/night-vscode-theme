@@ -1,7 +1,7 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 import U from "@/util/U";
 
-export default function merge(palette: TColorPalette): { [key: string]: THexColor } {
+export default function merge(palette: TColorPalette): TThemeColorMap {
   return {
     "merge.currentHeaderBackground": U.alpha(palette.green, 0.58),
     "merge.currentContentBackground": U.alpha(palette.green, 0.157),

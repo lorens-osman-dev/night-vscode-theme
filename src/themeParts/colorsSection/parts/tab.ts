@@ -1,6 +1,6 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 
-export default function tab(palette: TColorPalette): { [key: string]: THexColor } {
+export default function tab(palette: TColorPalette): TThemeColorMap {
   return {
     "editorGroupHeader.tabsBackground": palette.BackgroundSecond,
     "editorGroupHeader.tabsBorder": palette.transparent,

@@ -1,6 +1,6 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 
-export default function input(palette: TColorPalette): { [key: string]: THexColor } {
+export default function input(palette: TColorPalette): TThemeColorMap {
   return {
     "input.background": palette.background,
     "input.border": palette.transparent,

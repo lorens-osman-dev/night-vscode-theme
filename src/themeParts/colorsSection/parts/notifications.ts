@@ -1,6 +1,6 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 
-export default function notifications(palette: TColorPalette): { [key: string]: THexColor } {
+export default function notifications(palette: TColorPalette): TThemeColorMap {
   return {
     "notifications.foreground": palette.foreground,
     "notifications.background": palette.background,

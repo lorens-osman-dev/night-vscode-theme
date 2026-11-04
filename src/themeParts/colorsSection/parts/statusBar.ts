@@ -1,6 +1,6 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 
-export default function statusBar(palette: TColorPalette): { [key: string]: THexColor } {
+export default function statusBar(palette: TColorPalette): TThemeColorMap {
   return {
     "statusBar.foreground": palette.white,
     "statusBar.background": palette.background,

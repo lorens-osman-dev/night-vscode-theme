@@ -1,7 +1,7 @@
-import type { TColorPalette, THexColor } from "@/types/colors";
+import type { TColorPalette, TThemeColorMap } from "@/types/colors";
 import U from "@/util/U";
 
-export default function button(palette: TColorPalette): { [key: string]: THexColor } {
+export default function button(palette: TColorPalette): TThemeColorMap {
   return {
     "button.background": palette.background,
     "button.foreground": palette.white,
