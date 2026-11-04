@@ -37,6 +37,11 @@
         "path": "./themes/night-shahin-theme.json"
       },
       {
+        "label": "Night Darko",
+        "uiTheme": "vs-dark",
+        "path": "./themes/night-darko-theme.json"
+      },
+      {
         "label": "Night Test",
         "uiTheme": "vs-dark",
         "path": "./themes/night-test-theme.json"

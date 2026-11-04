@@ -1,6 +1,6 @@
 import type { TColorPalette } from "./types/colors";
 
-type PaletteName = "base" | "glass2" | "shahin" | "glass" | "test";
+type PaletteName = "base" | "glass2" | "shahin" | "darko" | "glass" | "test";
 
 export const palettes: Record<PaletteName, TColorPalette> = {
   base: {
@@ -85,6 +85,30 @@ export const palettes: Record<PaletteName, TColorPalette> = {
 
     background: "#161b21",
     BackgroundSecond: "#161b21",
+    foreground: "#d9dddc",
+    comments: "#64748b",
+  },
+  darko: {
+    transparent: "#00000000",
+
+    red: "#e17f83",
+    white: "#ffffff",
+    gray: "#a7b2b8",
+    yellow: "#b2a13c",
+    yellowBright: "#c8b754",
+    blue: "#05b7b0",
+    green: "#50b785",
+    greenSecond: "#8bb799",
+    banaf: "#829beb",
+    fosfor: "#baff58",
+    purple: "#9d6e74",
+    pink: "#ce82be",
+    orange: "#d68d4b",
+    brown: "#e18173",
+    gold: "#b9a779",
+
+    background: "#0e151a",
+    BackgroundSecond: "#14181d",
     foreground: "#d9dddc",
     comments: "#64748b",
   },
