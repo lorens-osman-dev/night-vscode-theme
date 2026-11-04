@@ -35,6 +35,11 @@
         "label": "Night Shahin",
         "uiTheme": "vs-dark",
         "path": "./themes/night-shahin-theme.json"
+      },
+      {
+        "label": "Night Test",
+        "uiTheme": "vs-dark",
+        "path": "./themes/night-test-theme.json"
       }
     ]
   },

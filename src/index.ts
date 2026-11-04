@@ -1,7 +1,8 @@
 import ThemeClass from "./themeClass";
 import { palettes } from "@/palettes";
 import U from "./util/U";
-import { colorTokens } from "./themeParts/tokenColorsSection/readyColorTokens";
+import { colorTokens as colorTokensOriginal } from "./themeParts/tokenColorsSection/readyColorTokensOriginal";
+import { colorTokens as colorTokensTest } from "./themeParts/tokenColorsSection/readyColorTokensTest";
 import syncThemeContributions from "./util/syncThemeContributions";
 
 function generateName(name: string) {
@@ -14,10 +15,11 @@ function generateName(name: string) {
 
 const themes = [
   { name: "vali", palette: palettes.base },
-  { name: "shift", palette: palettes.base, tokenColors: colorTokens },
-  { name: "glass", palette: palettes.glass },
-  { name: "glass2", palette: palettes.glass2, tokenColors: colorTokens },
-  { name: "shahin", palette: palettes.glass3 },
+  { name: "shift", palette: palettes.base, tokenColors: colorTokensOriginal },
+  { name: "glass", palette: palettes.glass, tokenColors: colorTokensTest },
+  { name: "glass2", palette: palettes.glass2, tokenColors: colorTokensOriginal },
+  { name: "shahin", palette: palettes.shahin },
+  { name: "test", palette: palettes.test, tokenColors: colorTokensTest },
 ];
 
 const themeContributions = themes.map(({ name, palette, tokenColors }) => {

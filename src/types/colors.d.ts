@@ -42,6 +42,7 @@ export type TColorPalette = {
   orange: THexColor;
   banaf: THexColor;
   gold?: THexColor;
+  gray?: THexColor;
 
   background: THexColor;
   BackgroundSecond: THexColor;

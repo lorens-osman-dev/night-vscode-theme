@@ -1,6 +1,8 @@
 import type { TColorPalette } from "./types/colors";
 
-export const palettes: { [key: string]: TColorPalette } = {
+type PaletteName = "base" | "glass2" | "shahin" | "glass" | "test";
+
+export const palettes: Record<PaletteName, TColorPalette> = {
   base: {
     transparent: "#00000000",
 
@@ -8,8 +10,8 @@ export const palettes: { [key: string]: TColorPalette } = {
     yellow: "#e9c965",
     yellowBright: "#fde68a",
     red: "#f87171",
-    blue: "#38bdf8",
-    green: "#34d399",
+    blue: "#57a7e6",
+    green: "#6bb471",
     greenSecond: "#28b1a2",
     banaf: "#7572f8",
     fosfor: "#baff58",
@@ -43,7 +45,7 @@ export const palettes: { [key: string]: TColorPalette } = {
     foreground: "#d9dddc",
     comments: "#64748b",
   },
-  glass3: {
+  shahin: {
     transparent: "#00000000",
     gold: "#b9a77977",
     white: "#ffffff",
@@ -83,6 +85,29 @@ export const palettes: { [key: string]: TColorPalette } = {
 
     background: "#161b21",
     BackgroundSecond: "#161b21",
+    foreground: "#d9dddc",
+    comments: "#64748b",
+  },
+  test: {
+    transparent: "#00000000",
+    red: "#e17f83",
+
+    white: "#ffffff",
+    gray: "#a7b2b8",
+    yellow: "#b2a13c",
+    yellowBright: "#c8b754",
+    blue: "#05b7b0",
+    green: "#50b785",
+    greenSecond: "#8bb799",
+    banaf: "#829beb",
+    fosfor: "#baff58",
+    purple: "#9d6e74",
+    pink: "#ce82be",
+    orange: "#d68d4b",
+    brown: "#e18173",
+    gold: "#b9a779",
+    background: "#2f353c",
+    BackgroundSecond: "#2f353c",
     foreground: "#d9dddc",
     comments: "#64748b",
   },
