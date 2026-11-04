@@ -50,6 +50,18 @@ If you close the VS Code debug instance, be sure to close its debug terminal as 
 
 The watcher also synchronizes the `contributes.themes` entries in `package.json` from the theme definitions in `src/index.ts`. Add or remove a theme in that list and the manifest updates automatically.
 
+## Update the color key types
+
+The theme parts in `src/themeParts/colorsSection/` use the `TThemeColorMap` type, which only accepts real VS Code theme color keys (e.g. `activityBar.background`, `titleBar.border`) and gives you autocomplete for them while editing.
+
+That key list is generated from VS Code's own color registry and stored in `src/types/vscodeColorKeys.d.ts`. When you update the `engines.vscode` version in `package.json` (or whenever you want to pick up recently added color keys), regenerate it from the project root:
+
+```bash
+bun run update-color-keys
+```
+
+This overwrites `src/types/vscodeColorKeys.d.ts` with the latest list. If VS Code reports a color key as valid but TypeScript flags it, run this command again to refresh the list.
+
 ## Output files
 
 The generated theme files are written to:

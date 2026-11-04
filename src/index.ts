@@ -16,7 +16,8 @@ const themes = [
   { name: "vali", palette: palettes.base },
   { name: "shift", palette: palettes.base, tokenColors: colorTokens },
   { name: "glass", palette: palettes.glass },
-  { name: "glass2", palette: palettes.glass2 },
+  { name: "glass2", palette: palettes.glass2, tokenColors: colorTokens },
+  { name: "shahin", palette: palettes.glass3 },
 ];
 
 const themeContributions = themes.map(({ name, palette, tokenColors }) => {

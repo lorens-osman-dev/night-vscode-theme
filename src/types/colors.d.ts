@@ -22,7 +22,7 @@ export type THexColor = `#${string}`;
 
 /** Any key VS Code's runtime color registry understands, with an optional hex value. */
 export type TThemeColorMap = {
-	[K in TVsCodeColorKey]?: THexColor;
+  [K in TVsCodeColorKey]?: THexColor;
 };
 
 export type TColorPalette = {
@@ -30,7 +30,7 @@ export type TColorPalette = {
 
   white: THexColor;
   yellow: THexColor;
-  yellowBright:THexColor;
+  yellowBright: THexColor;
   red: THexColor;
   blue: THexColor;
   green: THexColor;
@@ -40,8 +40,8 @@ export type TColorPalette = {
   pink: THexColor;
   brown: THexColor;
   orange: THexColor;
-  banaf:THexColor;
-
+  banaf: THexColor;
+  gold?: THexColor;
 
   background: THexColor;
   BackgroundSecond: THexColor;
